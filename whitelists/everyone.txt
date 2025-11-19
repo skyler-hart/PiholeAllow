@@ -31,7 +31,7 @@ dropboxapi.com
 onedrive.live.com
 data.microsoft.com
 icloud.com
-icloud-content.com\
+icloud-content.com
 wyzecam.com
 api.wyze.com
 vzw.com

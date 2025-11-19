@@ -17,16 +17,22 @@ paypal.com
 venmo.com
 mint.com
 creditkarma.com
+ally.com
+usaa.com
 
 # News & Media
 reddit.com
 medium.com
 nytimes.com
 washingtonpost.com
+foxnews.com
+dailymail.co.uk
+bbc.com
+cnn.com
+npr.org
 
 # Shopping (Adult-oriented)
 wine.com
-etsy.com
 wayfair.com
 
 # Entertainment
@@ -35,6 +41,8 @@ pandora.com
 hbomax.com
 paramount.com
 peacocktv.com
+pornhub.com
+motherless.com
 
 # Health
 webmd.com

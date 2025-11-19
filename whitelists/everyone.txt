@@ -30,11 +30,6 @@ duolingo.com
 coursera.org
 udemy.com
 
-# News
-bbc.com
-cnn.com
-npr.org
-
 # Social Media (supervised)
 facebook.com
 instagram.com
@@ -45,10 +40,10 @@ amazon.com
 ebay.com
 target.com
 walmart.com
+etsy.com
 
 # Gaming (family-friendly)
 minecraft.net
-roblox.com
 nintendo.com
 
 # Productivity

@@ -52,6 +52,7 @@ kayak.com
 homedepot.com
 lowes.com
 costco.com
+samsclub.com
 
 # Professional Development
 pluralsight.com

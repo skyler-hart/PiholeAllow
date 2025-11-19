@@ -1,0 +1,93 @@
+# Kids-Specific Blocklist
+# Additional domains that should be blocked specifically for children
+# These are in addition to the family-wide blocklist
+# Add one domain per line
+
+# Social Media (unmonitored access)
+tiktok.com
+snapchat.com
+discord.com
+telegram.org
+whatsapp.com
+kik.com
+yubo.com
+whisper.sh
+
+# Mature Gaming Content
+steamcommunity.com
+twitch.tv
+kick.com
+
+# Dating & Meeting Strangers
+tinder.com
+bumble.com
+hinge.com
+meetme.com
+badoo.com
+
+# User-Generated Content (unmoderated)
+4chan.org
+reddit.com
+imgur.com
+tumblr.com
+
+# Live Streaming (potential inappropriate content)
+periscope.tv
+younow.com
+
+# Chat Services
+chatrandom.com
+chatspin.com
+camsurf.com
+
+# Mature Video Content
+liveleak.com
+bestgore.com
+
+# Anonymous Messaging
+yikyak.com
+sarahah.com
+askfm.com
+
+# Cryptocurrency & Gambling
+coinbase.com
+robinhood.com
+webull.com
+
+# Forums with Mature Content
+quora.com
+medium.com
+
+# Shopping Without Supervision
+ebay.com
+amazon.com
+wish.com
+aliexpress.com
+shein.com
+
+# Proxy/VPN Services (to prevent bypassing filters)
+vpnbook.com
+hidemyass.com
+proxfree.com
+kproxy.com
+filterbypass.me
+vtunnel.com
+
+# Mature Music Content
+soundcloud.com
+
+# Unmoderated Wikis
+knowyourmeme.com
+
+# Potentially Dangerous DIY
+instructables.com/circuits/howto
+
+# Anonymous Forums
+8kun.top
+
+# Horror/Gore Content
+creepypasta.com
+r-nosleep.com
+
+# Peer Pressure & Harmful Trends
+worldstarhiphop.com

@@ -1,0 +1,78 @@
+# Family-wide Blocklist
+# Domains that should be blocked for ALL family members (kids and adults)
+# Add one domain per line
+
+# Malware & Phishing
+# (Consider using established blocklists like StevenBlack's hosts for comprehensive protection)
+
+# Explicit Adult Content
+pornhub.com
+xvideos.com
+xnxx.com
+redtube.com
+xhamster.com
+youporn.com
+tube8.com
+porn.com
+spankwire.com
+keezmovies.com
+extremetube.com
+mofosex.com
+
+# Gambling Sites
+bet365.com
+draftkings.com
+fanduel.com
+pokerstars.com
+888casino.com
+bovada.lv
+betonline.ag
+
+# Piracy & Illegal Content
+thepiratebay.org
+1337x.to
+rarbg.to
+kickasstorrents.to
+torrentz2.eu
+
+# Malicious/Scam Sites
+freeiptvplayer.com
+virus-protection-2024.com
+
+# Cryptocurrency Mining
+coinhive.com
+jsecoin.com
+crypto-loot.com
+webminepool.com
+
+# Tracking & Invasive Advertising
+doubleclick.net
+googleadservices.com
+googlesyndication.com
+scorecardresearch.com
+
+# Time-wasting Sites (Optional - adjust to family needs)
+9gag.com
+buzzfeed.com
+
+# Dark Web Access
+torproject.org
+
+# Potentially Harmful Social Media Features
+onlyfans.com
+chatroulette.com
+omegle.com
+
+# Hate Speech & Extremist Content
+8kun.top
+4chan.org
+
+# Dangerous Challenges
+tiktok.com/tag/dangerouschallenge
+
+# Drug-related Content
+leafly.com
+weedmaps.com
+
+# Weapons & Violence
+buygunsandammo.com

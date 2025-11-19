@@ -1,0 +1,115 @@
+# Combined Allow List: Everyone + Adults
+# This list includes domains for family-wide access plus adult-specific content
+# Use this for parent/adult devices with full access
+# Add one domain per line
+
+# Essential Services
+google.com
+youtube.com
+wikipedia.org
+github.com
+
+# Email Services
+gmail.com
+outlook.com
+mail.google.com
+
+# Cloud Storage
+drive.google.com
+dropbox.com
+onedrive.live.com
+
+# Video Streaming (Family-friendly)
+netflix.com
+disneyplus.com
+hulu.com
+primevideo.com
+
+# Educational
+khanacademy.org
+duolingo.com
+coursera.org
+udemy.com
+
+# News
+bbc.com
+cnn.com
+npr.org
+
+# Social Media (supervised)
+facebook.com
+instagram.com
+twitter.com
+
+# Shopping
+amazon.com
+ebay.com
+target.com
+walmart.com
+
+# Gaming (family-friendly)
+minecraft.net
+roblox.com
+nintendo.com
+
+# Productivity
+office.com
+docs.google.com
+sheets.google.com
+slides.google.com
+
+# Work & Professional
+linkedin.com
+slack.com
+zoom.us
+teams.microsoft.com
+webex.com
+
+# Financial Services
+bankofamerica.com
+chase.com
+wellsfargo.com
+paypal.com
+venmo.com
+mint.com
+creditkarma.com
+
+# News & Media
+reddit.com
+medium.com
+nytimes.com
+washingtonpost.com
+
+# Shopping (Adult-oriented)
+wine.com
+etsy.com
+wayfair.com
+
+# Entertainment
+spotify.com
+pandora.com
+hbomax.com
+paramount.com
+peacocktv.com
+
+# Health
+webmd.com
+mayoclinic.org
+healthline.com
+
+# Travel
+expedia.com
+booking.com
+airbnb.com
+hotels.com
+kayak.com
+
+# Home Services
+homedepot.com
+lowes.com
+costco.com
+
+# Professional Development
+pluralsight.com
+skillshare.com
+masterclass.com

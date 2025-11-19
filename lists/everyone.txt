@@ -1,0 +1,58 @@
+# Family-wide Allow List
+# Domains that everyone in the family can access (kids, adults, etc.)
+# Add one domain per line
+
+# Essential Services
+google.com
+youtube.com
+wikipedia.org
+github.com
+
+# Email Services
+gmail.com
+outlook.com
+mail.google.com
+
+# Cloud Storage
+drive.google.com
+dropbox.com
+onedrive.live.com
+
+# Video Streaming (Family-friendly)
+netflix.com
+disneyplus.com
+hulu.com
+primevideo.com
+
+# Educational
+khanacademy.org
+duolingo.com
+coursera.org
+udemy.com
+
+# News
+bbc.com
+cnn.com
+npr.org
+
+# Social Media (supervised)
+facebook.com
+instagram.com
+twitter.com
+
+# Shopping
+amazon.com
+ebay.com
+target.com
+walmart.com
+
+# Gaming (family-friendly)
+minecraft.net
+roblox.com
+nintendo.com
+
+# Productivity
+office.com
+docs.google.com
+sheets.google.com
+slides.google.com

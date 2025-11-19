@@ -21,6 +21,7 @@ mint.com
 creditkarma.com
 ally.com
 usaa.com
+robinhood.com
 
 # News & Media
 reddit.com

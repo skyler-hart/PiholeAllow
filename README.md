@@ -4,14 +4,14 @@ A family-friendly Pi-hole allow list system with different permission levels for
 
 ## Overview
 
-This repository contains curated allow lists for Pi-hole DNS servers, designed to provide different access levels for family members:
+This repository contains curated allow lists and blocklists for Pi-hole DNS servers, designed to provide different access levels for family members:
 - **Kids**: Safe, age-appropriate content
 - **Adults**: Professional and personal services for parents
 - **Everyone**: Common family-wide services
 
 ## List Structure
 
-### Individual Lists
+### Allow Lists
 
 Located in the `lists/` directory:
 
@@ -44,9 +44,35 @@ Pre-merged lists for easier Pi-hole integration:
 - **`kids-only.txt`** - Everyone + Kids
 - **`adults-only.txt`** - Everyone + Adults
 
+### Blocklists
+
+Located in the `blocklists/` directory:
+
+- **`everyone.txt`** - Domains to block for ALL family members
+  - Explicit adult content
+  - Gambling sites
+  - Piracy and illegal content
+  - Malware and scam sites
+  - Cryptocurrency mining
+  - Hate speech and extremist content
+  - Drug-related content
+
+- **`kids-block.txt`** - Additional blocks specifically for children
+  - Unmonitored social media (TikTok, Snapchat, Discord)
+  - Dating apps and stranger-meeting sites
+  - Mature gaming content (Steam, Twitch)
+  - User-generated unmoderated content
+  - Shopping without supervision
+  - VPN/Proxy services (to prevent filter bypass)
+  - Anonymous messaging apps
+
+- **`kids-combined-block.txt`** - Pre-merged list (everyone + kids-block)
+  - Complete blocklist for children's devices
+  - Includes all family-wide blocks plus kids-specific blocks
+
 ## Usage
 
-### Option 1: Use Pre-Combined Lists (Recommended)
+### Allow Lists - Option 1: Use Pre-Combined Lists (Recommended)
 
 These are the easiest to use and maintain:
 
@@ -64,6 +90,24 @@ These are the easiest to use and maintain:
    ```
    https://raw.githubusercontent.com/skyler-hart/PiholeAllow/main/lists/all-family.txt
    ```
+
+### Blocklists - Recommended Usage
+
+**Important:** Pi-hole blocklists should be added to the **Blocklist/Adlists** section, not the allowlist.
+
+1. **For ALL devices** (family-wide protection): Use `everyone.txt`
+   ```
+   https://raw.githubusercontent.com/skyler-hart/PiholeAllow/main/blocklists/everyone.txt
+   ```
+
+2. **For children's devices** (stricter filtering): Use `kids-combined-block.txt`
+   ```
+   https://raw.githubusercontent.com/skyler-hart/PiholeAllow/main/blocklists/kids-combined-block.txt
+   ```
+
+3. **Granular control**: Combine individual blocklists
+   - For kids: Add both `everyone.txt` + `kids-block.txt`
+   - For adults: Add only `everyone.txt`
 
 ### Option 2: Combine Individual Lists
 

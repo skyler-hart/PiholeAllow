@@ -51,13 +51,6 @@ googleadservices.com
 googlesyndication.com
 scorecardresearch.com
 
-# Time-wasting Sites (Optional - adjust to family needs)
-9gag.com
-buzzfeed.com
-
-# Dark Web Access
-torproject.org
-
 # Potentially Harmful Social Media Features
 onlyfans.com
 chatroulette.com

@@ -38,6 +38,8 @@ wayfair.com
 # Entertainment
 spotify.com
 pandora.com
+stats.pandora.com
+adserver.pandora.com
 hbomax.com
 paramount.com
 peacocktv.com

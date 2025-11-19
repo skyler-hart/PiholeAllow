@@ -7,6 +7,13 @@ google.com
 youtube.com
 wikipedia.org
 github.com
+www.googleapis.com
+youtubei.googleapis.com
+oauthaccountmanager.googleapis.com
+gstaticadssl.l.google.com
+fonts.google.com
+googleapis.l.google.com
+dl.google.com
 
 # Email Services
 gmail.com

@@ -1,0 +1,59 @@
+# Adults-Only Allow List
+# Domains for parents/adults only
+# Add one domain per line
+
+# Work & Professional
+linkedin.com
+slack.com
+zoom.us
+teams.microsoft.com
+webex.com
+
+# Financial Services
+bankofamerica.com
+chase.com
+wellsfargo.com
+paypal.com
+venmo.com
+mint.com
+creditkarma.com
+
+# News & Media
+reddit.com
+medium.com
+nytimes.com
+washingtonpost.com
+
+# Shopping (Adult-oriented)
+wine.com
+etsy.com
+wayfair.com
+
+# Entertainment
+spotify.com
+pandora.com
+hbomax.com
+paramount.com
+peacocktv.com
+
+# Health
+webmd.com
+mayoclinic.org
+healthline.com
+
+# Travel
+expedia.com
+booking.com
+airbnb.com
+hotels.com
+kayak.com
+
+# Home Services
+homedepot.com
+lowes.com
+costco.com
+
+# Professional Development
+pluralsight.com
+skillshare.com
+masterclass.com

@@ -1,0 +1,40 @@
+# Kids-Only Allow List
+# Domains specifically for children's use
+# Add one domain per line
+
+# Educational Sites
+pbskids.org
+abcya.com
+starfall.com
+funbrain.com
+coolmath-games.com
+mathplayground.com
+nationalgeographic.com
+
+# Kids Entertainment
+nick.com
+cartoonnetwork.com
+disneynow.com
+pbskids.org
+
+# Safe Video Content
+youtube.com/kids
+youtubekids.com
+
+# Online Safety
+commonsensemedia.org
+
+# Kids Games
+pogo.com
+miniclip.com
+agame.com
+girlsgogames.com
+
+# Educational Apps
+scratch.mit.edu
+code.org
+tynker.com
+
+# Kids Books
+getepic.com
+storylineonline.net

@@ -57,7 +57,7 @@ Located in the `blocklists/` directory:
   - Hate speech and extremist content
   - Drug-related content
 
-- **`kids-block.txt`** - Additional blocks specifically for children
+- **`kids.txt`** - Additional blocks specifically for children
   - Unmonitored social media (TikTok, Snapchat, Discord)
   - Dating apps and stranger-meeting sites
   - Mature gaming content (Steam, Twitch)
@@ -66,7 +66,7 @@ Located in the `blocklists/` directory:
   - VPN/Proxy services (to prevent filter bypass)
   - Anonymous messaging apps
 
-- **`kids-combined-block.txt`** - Pre-merged list (everyone + kids-block)
+- **`kids-combined-block.txt`** - Pre-merged list (everyone + kids)
   - Complete blocklist for children's devices
   - Includes all family-wide blocks plus kids-specific blocks
 
@@ -106,7 +106,7 @@ These are the easiest to use and maintain:
    ```
 
 3. **Granular control**: Combine individual blocklists
-   - For kids: Add both `everyone.txt` + `kids-block.txt`
+   - For kids: Add both `everyone.txt` + `kids.txt`
    - For adults: Add only `everyone.txt`
 
 ### Option 2: Combine Individual Lists

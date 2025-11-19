@@ -1,5 +1,5 @@
 # Combined Kids Blocklist
-# This list includes ALL blocks for children (everyone + kids-block)
+# This list includes ALL blocks for children (everyone + kids)
 # Use this for children's devices
 # Add one domain per line
 

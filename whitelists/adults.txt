@@ -9,6 +9,7 @@ zoom.us
 teams.microsoft.com
 webex.com
 smres.zdxten.net
+xpercare.hostedrmm.com
 
 # Financial Services
 bankofamerica.com

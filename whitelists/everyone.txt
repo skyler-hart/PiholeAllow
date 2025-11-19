@@ -17,6 +17,7 @@ dl.google.com
 pinterest.com
 weather.com
 mapbox.com
+discovery.meethue.com
 
 # Email Services
 gmail.com
@@ -26,11 +27,13 @@ mail.google.com
 # Cloud Storage
 drive.google.com
 dropbox.com
+dropboxapi.com
 onedrive.live.com
+data.microsoft.com
 icloud.com
 icloud-content.com
-data.microsoft.com
 wyzecam.com
+api.wyze.com
 vzw.com
 
 # Video Streaming (Family-friendly)
@@ -43,6 +46,7 @@ disneyplus.bn5x.net
 hulu.com
 paramountplus.com
 primevideo.com
+services.sonarr.tv
 
 # Educational
 khanacademy.org

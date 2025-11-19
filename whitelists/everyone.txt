@@ -14,6 +14,9 @@ gstaticadssl.l.google.com
 fonts.google.com
 googleapis.l.google.com
 dl.google.com
+pinterest.com
+weather.com
+mapbox.com
 
 # Email Services
 gmail.com
@@ -24,11 +27,21 @@ mail.google.com
 drive.google.com
 dropbox.com
 onedrive.live.com
+icloud.com
+icloud-content.com
+data.microsoft.com
+wyzecam.com
+vzw.com
 
 # Video Streaming (Family-friendly)
 netflix.com
 disneyplus.com
+disney-plus.net
+registerdisney.go.com
+disney-portal.my.onetrust.com
+disneyplus.bn5x.net
 hulu.com
+paramountplus.com
 primevideo.com
 
 # Educational
@@ -58,3 +71,7 @@ office.com
 docs.google.com
 sheets.google.com
 slides.google.com
+
+# Crap
+# www.googleadservices.com
+# ad.doubleclick.net

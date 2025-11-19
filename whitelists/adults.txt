@@ -8,6 +8,7 @@ slack.com
 zoom.us
 teams.microsoft.com
 webex.com
+smres.zdxten.net
 
 # Financial Services
 bankofamerica.com

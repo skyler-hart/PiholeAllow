@@ -1,73 +1,73 @@
 # Adults-Only Allow List
 # Domains for parents/adults only
-# Add one domain per line
+# ABP-style allowlist format using @@|| syntax
 
 # Work & Professional
-linkedin.com
-slack.com
-zoom.us
-teams.microsoft.com
-webex.com
-smres.zdxten.net
-xpercare.hostedrmm.com
+@@||linkedin.com^
+@@||slack.com^
+@@||zoom.us^
+@@||teams.microsoft.com^
+@@||webex.com^
+@@||smres.zdxten.net^
+@@||xpercare.hostedrmm.com^
 
 # Financial Services
-bankofamerica.com
-chase.com
-wellsfargo.com
-paypal.com
-venmo.com
-mint.com
-creditkarma.com
-ally.com
-usaa.com
-robinhood.com
+@@||bankofamerica.com^
+@@||chase.com^
+@@||wellsfargo.com^
+@@||paypal.com^
+@@||venmo.com^
+@@||mint.com^
+@@||creditkarma.com^
+@@||ally.com^
+@@||usaa.com^
+@@||robinhood.com^
 
 # News & Media
-reddit.com
-medium.com
-nytimes.com
-washingtonpost.com
-foxnews.com
-dailymail.co.uk
-bbc.com
-cnn.com
-npr.org
+@@||reddit.com^
+@@||medium.com^
+@@||nytimes.com^
+@@||washingtonpost.com^
+@@||foxnews.com^
+@@||dailymail.co.uk^
+@@||bbc.com^
+@@||cnn.com^
+@@||npr.org^
 
 # Shopping (Adult-oriented)
-wine.com
-wayfair.com
+@@||wine.com^
+@@||wayfair.com^
 
 # Entertainment
-spotify.com
-pandora.com
-stats.pandora.com
-adserver.pandora.com
-hbomax.com
-paramount.com
-peacocktv.com
-pornhub.com
-motherless.com
+@@||spotify.com^
+@@||pandora.com^
+@@||stats.pandora.com^
+@@||adserver.pandora.com^
+@@||hbomax.com^
+@@||paramount.com^
+@@||peacocktv.com^
+@@||pornhub.com^
+@@||motherless.com^
 
 # Health
-webmd.com
-mayoclinic.org
-healthline.com
+@@||webmd.com^
+@@||mayoclinic.org^
+@@||healthline.com^
 
 # Travel
-expedia.com
-booking.com
-airbnb.com
-hotels.com
-kayak.com
+@@||expedia.com^
+@@||booking.com^
+@@||airbnb.com^
+@@||hotels.com^
+@@||kayak.com^
 
 # Home Services
-homedepot.com
-lowes.com
-costco.com
-samsclub.com
+@@||homedepot.com^
+@@||lowes.com^
+@@||costco.com^
+@@||samsclub.com^
 
 # Professional Development
-pluralsight.com
-skillshare.com
-masterclass.com
+@@||pluralsight.com^
+@@||skillshare.com^
+@@||masterclass.com^

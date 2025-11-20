@@ -1,106 +1,106 @@
 # Family-wide Blocklist
 # Domains that should be blocked for ALL family members (kids and adults)
-# Add one domain per line
+# ABP-style format for better Pi-hole compatibility
 
-# Explicit Adult Content (REGEX WILDCARDS)
-(^|\.)pornhub\.com$
-(^|\.)xvideos\.com$
-(^|\.)xnxx\.com$
-(^|\.)redtube\.com$
-(^|\.)xhamster\.com$
-(^|\.)youporn\.com$
-(^|\.)tube8\.com$
-(^|\.)porn\.com$
-(^|\.)spankwire\.com$
-(^|\.)keezmovies\.com$
-(^|\.)extremetube\.com$
-(^|\.)mofosex\.com$
-(^|\.)brazzers\.com$
-(^|\.)bangbros\.com$
-(^|\.)naughtyamerica\.com$
-(^|\.)realitykings\.com$
+# Explicit Adult Content (ABP-style)
+||pornhub.com^
+||xvideos.com^
+||xnxx.com^
+||redtube.com^
+||xhamster.com^
+||youporn.com^
+||tube8.com^
+||porn.com^
+||spankwire.com^
+||keezmovies.com^
+||extremetube.com^
+||mofosex.com^
+||brazzers.com^
+||bangbros.com^
+||naughtyamerica.com^
+||realitykings.com^
 
-# Gambling Sites (REGEX WILDCARDS)
-(^|\.)bet365\.com$
-(^|\.)draftkings\.com$
-(^|\.)fanduel\.com$
-(^|\.)pokerstars\.com$
-(^|\.)888casino\.com$
-(^|\.)bovada\.lv$
-(^|\.)betonline\.ag$
-(^|\.)caesars\.com$
-(^|\.)mgm\.com$
-(^|\.)betmgm\.com$
-(^|\.)pointsbet\.com$
+# Gambling Sites (ABP-style)
+||bet365.com^
+||draftkings.com^
+||fanduel.com^
+||pokerstars.com^
+||888casino.com^
+||bovada.lv^
+||betonline.ag^
+||caesars.com^
+||mgm.com^
+||betmgm.com^
+||pointsbet.com^
 
-# Malicious/Scam Sites (REGEX WILDCARDS)
-(^|\.)freeiptvplayer\.com$
-(^|\.)virus-protection-2024\.com$
-(^|\.)fake-security-alert\..*$
-(^|\.)malware-alert\..*$
-(^|\.)your-computer-infected\..*$
-(^|\.)urgent-update-required\..*$
+# Malicious/Scam Sites (ABP-style with wildcards)
+||freeiptvplayer.com^
+||virus-protection-2024.com^
+||*fake-security-alert*.com^
+||*malware-alert*.com^
+||*your-computer-infected*.com^
+||*urgent-update-required*.com^
 
-# Cryptocurrency Mining (REGEX WILDCARDS)
-(^|\.)coinhive\.com$
-(^|\.)jsecoin\.com$
-(^|\.)crypto-loot\.com$
-(^|\.)webminepool\.com$
-(^|\.)authedmine\.com$
-(^|\.)coin-hive\.com$
-(^|\.)minero\.cc$
-(^|\.)webmine\..*$
+# Cryptocurrency Mining (ABP-style)
+||coinhive.com^
+||jsecoin.com^
+||crypto-loot.com^
+||webminepool.com^
+||authedmine.com^
+||coin-hive.com^
+||minero.cc^
+||*webmine*.com^
 
-# Tracking & Invasive Advertising (REGEX WILDCARDS)
-(^|\.)doubleclick\.net$
-(^|\.)googleadservices\.com$
-(^|\.)googlesyndication\.com$
-(^|\.)scorecardresearch\.com$
-(^|\.)google-analytics\.com$
-(^|\.)facebook\.com/tr.*$
-(^|\.)outbrain\.com$
-(^|\.)taboola\.com$
-(^|\.)adsystem\..*$
+# Tracking & Invasive Advertising (ABP-style)
+||doubleclick.net^
+||googleadservices.com^
+||googlesyndication.com^
+||scorecardresearch.com^
+||google-analytics.com^
+||facebook.com/tr/
+||outbrain.com^
+||taboola.com^
+||*adsystem*.com^
 
-# Potentially Harmful Social Media Features (REGEX WILDCARDS)
-(^|\.)onlyfans\.com$
-(^|\.)chatroulette\.com$
-(^|\.)omegle\.com$
-(^|\.)cam4\.com$
-(^|\.)chaturbate\.com$
-(^|\.)livejasmin\.com$
+# Potentially Harmful Social Media Features (ABP-style)
+||onlyfans.com^
+||chatroulette.com^
+||omegle.com^
+||cam4.com^
+||chaturbate.com^
+||livejasmin.com^
 
-# Hate Speech & Extremist Content (REGEX WILDCARDS)
-(^|\.)8kun\.top$
-(^|\.)8chan\..*$
-(^|\.)gab\.com$
+# Hate Speech & Extremist Content (ABP-style)
+||8kun.top^
+||*8chan*.org^
+||gab.com^
 
-# Dangerous Challenges (REGEX WILDCARDS)
-(^|\.)tiktok\.com/tag/dangerouschallenge.*$
-(^|\.)tiktok\.com/tag/suicide.*$
-(^|\.)tiktok\.com/tag/selfharm.*$
-(^|\.)youtube\.com/.*dangerous.*challenge.*$
+# Dangerous Challenges (ABP-style)
+||tiktok.com/tag/dangerouschallenge
+||tiktok.com/tag/suicide
+||tiktok.com/tag/selfharm
+||youtube.com/*dangerous*challenge*
 
-# Drug-related Content (REGEX WILDCARDS)
-(^|\.)leafly\.com$
-(^|\.)weedmaps\.com$
-(^|\.)eaze\.com$
-(^|\.)dutchie\.com$
-
-##########################################
-# PHISHING & FAKE SITES (REGEX WILDCARDS)
-##########################################
-(^|\.)paypal-security\..*$
-(^|\.)amazon-security\..*$
-(^|\.)apple-security\..*$
-(^|\.)microsoft-security\..*$
-(^|\.)bank-security\..*$
+# Drug-related Content (ABP-style)
+||leafly.com^
+||weedmaps.com^
+||eaze.com^
+||dutchie.com^
 
 ##########################################
-# MALWARE & VIRUS DISTRIBUTION (REGEX WILDCARDS)
+# PHISHING & FAKE SITES (ABP-style)
 ##########################################
-(^|\.)malwaredomainlist\..*$
-(^|\.)virusdownload\..*$
-(^|\.)trojanhorse\..*$
-(^|\.)backdoor\..*$
+||*paypal-security*.com^
+||*amazon-security*.com^
+||*apple-security*.com^
+||*microsoft-security*.com^
+||*bank-security*.com^
+
+##########################################
+# MALWARE & VIRUS DISTRIBUTION (ABP-style)
+##########################################
+||*malwaredomainlist*.com^
+||*virusdownload*.com^
+||*trojanhorse*.com^
+||*backdoor*.com^
 

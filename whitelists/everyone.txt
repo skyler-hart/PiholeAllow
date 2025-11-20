@@ -1,236 +1,232 @@
 # Family-wide Allow List
 # Domains that everyone in the family can access (kids, adults, etc.)
-# Add one domain per line
+# ABP-style allowlist format using @@|| syntax
 
 # Essential Services
-google.com
-youtube.com
-wikipedia.org
-github.com
-pinterest.com
-#weather.com
-mapbox.com
-cloudflare.com
+@@||google.com^
+@@||youtube.com^
+@@||wikipedia.org^
+@@||github.com^
+@@||pinterest.com^
+@@||weather.com^
+@@||mapbox.com^
+@@||cloudflare.com^
 
 # Cloud Storage
-dropbox.com
-dropboxapi.com
-#onedrive.live.com
-vzw.com
+@@||dropbox.com^
+@@||dropboxapi.com^
+@@||onedrive.live.com^
+@@||vzw.com^
+@@||icloud.com
 
 # Video Streaming (Family-friendly)
-netflix.com
-disneyplus.com
-disney-plus.net
-#registerdisney.go.com
-#disney-portal.my.onetrust.com
-#disneyplus.bn5x.net
-hulu.com
-paramountplus.com
-primevideo.com
-services.sonarr.tv
-youtube.com
-youtubetv.com
+@@||netflix.com^
+@@||disneyplus.com^
+@@||disney-plus.net^
+@@||registerdisney.go.com^
+@@||disney-portal.my.onetrust.com^
+@@||disneyplus.bn5x.net^
+@@||hulu.com^
+@@||paramountplus.com^
+@@||primevideo.com^
+@@||services.sonarr.tv^
+@@||youtubetv.com^
 
 # Educational
-khanacademy.org
-duolingo.com
-coursera.org
-udemy.com
-edx.org
-codecademy.com
-brilliant.org
+@@||khanacademy.org^
+@@||duolingo.com^
+@@||coursera.org^
+@@||udemy.com^
+@@||edx.org^
+@@||codecademy.com^
+@@||brilliant.org^
 
 # Social Media (supervised)
-facebook.com
-instagram.com
-twitter.com
-x.com
+@@||facebook.com^
+@@||instagram.com^
+@@||twitter.com^
+@@||x.com^
 
 # Shopping
-amazon.com
-ebay.com
-(^|\.)target\.com$
-(^|\.)walmart\.com$
-(^|\.)etsy\.com$
-(^|\.)costco\.com$
-(^|\.)bestbuy\.com$
+@@||amazon.com^
+@@||ebay.com^
+@@||target.com^
+@@||walmart.com^
+@@||etsy.com^
+@@||costco.com^
+@@||bestbuy.com^
 
-
-##########################################
-# APPLE-CORE-SERVICES (REGEX WILDCARDS)
-##########################################
-(^|\.)apple\.com$
-(^|\.)icloud-content\.com$
-(^|\.)appleid\.apple\.com$
-(^|\.)api\.apple-cloudkit\.com$
-(^|\.)configuration\.apple\.com$
-(^|\.)init-p01md\.apple\.com$
-(^|\.)gsa\.apple\.com$
-(^|\.)static\.ips\.apple\.com$
-(^|\.)gs\.apple\.com$
-(^|\.)captive\.apple\.com$
-(^|\.)cdn-apple\.com$
-(^|\.)cds\.apple\.com$
-(^|\.)push\.apple\.com$
-(^|\.)xp\.apple\.com$
-(^|\.)ocsp\.apple\.com$
-(^|\.)ocsp2\.apple\.com$
-(^|\.)itunes\.apple\.com$
-
-# IMPORTANT: do NOT wildcard icloud.com itself
-# This keeps mask.icloud.com and other DoH services blockable.
-icloud.com
+# Productivity & Communication
+@@||zoom.us^
+@@||slack.com^
+@@||discord.com^
+@@||teams.microsoft.com^
 
 ##########################################
-# GOOGLE-CORE-SERVICES (REGEX WILDCARDS)
+# APPLE-CORE-SERVICES (ABP-STYLE)
 ##########################################
-(^|\.)google\.com$
-(^|\.)gstatic\.com$
-(^|\.)googleapis\.com$
-(^|\.)firebaseinstallations\.googleapis\.com$
-(^|\.)fcm\.googleapis\.com$
-(^|\.)fcm\.google\.com$
-(^|\.)mtalk\.google\.com$
-(^|\.)clients4\.google\.com$
-(^|\.)clients5\.google\.com$
-(^|\.)android\.clients\.google\.com$
-(^|\.)dl\.google\.com$
-(^|\.)dl\.l\.google\.com$
-(^|\.)fonts\.gstatic\.com$
-(^|\.)fonts\.google\.com$
-(^|\.)fonts\.googleapis\.com$
-(^|\.)docs\.google\.com$
-(^|\.)sheets\.google\.com$
-(^|\.)slides\.google\.com$
-(^|\.)gmail\.com$
-(^|\.)mail\.google\.com$
+@@||apple.com^
+@@||icloud-content.com^
+@@||appleid.apple.com^
+@@||api.apple-cloudkit.com^
+@@||configuration.apple.com^
+@@||init-p01md.apple.com^
+@@||gsa.apple.com^
+@@||static.ips.apple.com^
+@@||gs.apple.com^
+@@||captive.apple.com^
+@@||cdn-apple.com^
+@@||cds.apple.com^
+@@||push.apple.com^
+@@||xp.apple.com^
+@@||ocsp.apple.com^
+@@||ocsp2.apple.com^
+@@||itunes.apple.com^
+
+##########################################
+# GOOGLE-CORE-SERVICES (ABP-STYLE)
+##########################################
+@@||gstatic.com^
+@@||googleapis.com^
+@@||firebaseinstallations.googleapis.com^
+@@||fcm.googleapis.com^
+@@||fcm.google.com^
+@@||mtalk.google.com^
+@@||clients4.google.com^
+@@||clients5.google.com^
+@@||android.clients.google.com^
+@@||dl.google.com^
+@@||dl.l.google.com^
+@@||fonts.gstatic.com^
+@@||fonts.google.com^
+@@||fonts.googleapis.com^
+@@||docs.google.com^
+@@||sheets.google.com^
+@@||slides.google.com^
+@@||gmail.com^
+@@||mail.google.com^
+@@||drive.google.com^
+
 # Android/Google Play essentials
-(^|\.)play\.google\.com$
-(^|\.)play\.googleapis\.com$
-(^|\.)googleplay\.com$
+@@||play.google.com^
+@@||play.googleapis.com^
+@@||googleplay.com^
 
 ##########################################
-# MICROSOFT-CORE-SERVICES (REGEX WILDCARDS)
+# MICROSOFT-CORE-SERVICES (ABP-STYLE)
 ##########################################
-(^|\.)microsoft\.com$
-(^|\.)data\.microsoft\.com$
-(^|\.)msftauth\.net$
-(^|\.)msftauthimages\.net$
-(^|\.)live\.com$
-(^|\.)live\.net$
-(^|\.)outlook\.com$
-(^|\.)office\.com$
-(^|\.)office365\.com$
-(^|\.)windowsupdate\.com$
-(^|\.)update\.microsoft\.com$
-(^|\.)login\.microsoftonline\.com$
-(^|\.)graph\.microsoft\.com$
-(^|\.)cdn\.office\.net$
-(^|\.)teams\.microsoft\.com$
-(^|\.)skype\.com$
-(^|\.)sfx\.ms$
+@@||microsoft.com^
+@@||data.microsoft.com^
+@@||msftauth.net^
+@@||msftauthimages.net^
+@@||live.com^
+@@||live.net^
+@@||outlook.com^
+@@||office.com^
+@@||office365.com^
+@@||windowsupdate.com^
+@@||update.microsoft.com^
+@@||login.microsoftonline.com^
+@@||graph.microsoft.com^
+@@||cdn.office.net^
+@@||skype.com^
+@@||sfx.ms^
 
 ##########################################
-# SMART-TV-ESSENTIALS (REGEX WILDCARDS)
+# SMART-TV-ESSENTIALS (ABP-STYLE)
 ##########################################
 
 # Samsung (safe essentials only)
-(^|\.)samsung\.com$
-(^|\.)samsungcloudcdn\.com$
-(^|\.)samsungknox\.com$
-(^|\.)samsungiotcloud\.com$
+@@||samsung.com^
+@@||samsungcloudcdn.com^
+@@||samsungknox.com^
+@@||samsungiotcloud.com^
 
 # LG (safe essentials only)
-(^|\.)lg\.com$
-(^|\.)lge\.com$
-(^|\.)lgtvswcdn\.com$
+@@||lg.com^
+@@||lge.com^
+@@||lgtvswcdn.com^
 
 # Vizio (safe essentials only)
-(^|\.)vizio\.com$
-(^|\.)smartcast\.tv$
+@@||vizio.com^
+@@||smartcast.tv^
 
 # Roku (safe essentials only)
-(^|\.)roku\.com$
-(^|\.)cloudservices\.roku\.com$
+@@||roku.com^
+@@||cloudservices.roku.com^
 
 ##########################################
-# IOT-CORE-SERVICES (REGEX WILDCARDS)
+# IOT-CORE-SERVICES (ABP-STYLE)
 ##########################################
 
 # Philips Hue essentials
-(^|\.)philips-hue\.com$
-(^|\.)meethue\.com$
-(^|\.)discovery\.meethue\.com$
+@@||philips-hue.com^
+@@||meethue.com^
+@@||discovery.meethue.com^
 
 # Wyze essentials
-(^|\.)wyze\.com$
-(^|\.)wyze-device-alexa\.amazonaws\.com$
-(^|\.)wyzecam\.com$
-(^|\.)api\.wyze\.com$
+@@||wyze.com^
+@@||wyze-device-alexa.amazonaws.com^
+@@||wyzecam.com^
+@@||api.wyze.com^
 
 # Amazon IoT essentials
-(^|\.)amazon\.com$
-(^|\.)amazonaws\.com$
-(^|\.)softwareupdates\.amazon\.com$
+@@||amazonaws.com^
+@@||softwareupdates.amazon.com^
 
 ##########################################
-# CLOUD-INFRASTRUCTURE (REGEX WILDCARDS)
+# CLOUD-INFRASTRUCTURE (ABP-STYLE)
 ##########################################
-(^|\.)akamaihd\.net$
-(^|\.)akamai\.net$
-(^|\.)akamaitechnologies\.com$
-(^|\.)edgekey\.net$
-(^|\.)edgesuite\.net$
-(^|\.)cloudfront\.net$
-(^|\.)fastly\.net$
-(^|\.)cdn\.cloudflare\.net$
+@@||akamaihd.net^
+@@||akamai.net^
+@@||akamaitechnologies.com^
+@@||edgekey.net^
+@@||edgesuite.net^
+@@||cloudfront.net^
+@@||fastly.net^
+@@||cdn.cloudflare.net^
 
 ##########################################
 # AUTH / CAPTIVE PORTAL / CONNECTIVITY
 ##########################################
-(^|\.)clients3\.google\.com$
-(^|\.)connectivitycheck\.android\.com$
-(^|\.)connectivitycheck\.gstatic\.com$
-(^|\.)neverssl\.com$
-(^|\.)captive\.apple\.com$
+@@||clients3.google.com^
+@@||connectivitycheck.android.com^
+@@||connectivitycheck.gstatic.com^
+@@||neverssl.com^
 
 ##########################################
-# PUSH NOTIFICATIONS (REGEX WILDCARDS)
+# PUSH NOTIFICATIONS (ABP-STYLE)
 ##########################################
-(^|\.)push\.apple\.com$
-(^|\.)push-apple\.com\.akadns\.net$
-(^|\.)pns\.apple\.com$
-(^|\.)fcm\.googleapis\.com$
-(^|\.)mtalk\.google\.com$
+@@||push-apple.com.akadns.net^
+@@||pns.apple.com^
 
 ##########################################
-# TIME SERVERS (REGEX WILDCARDS)
+# TIME SERVERS (ABP-STYLE)
 ##########################################
-(^|\.)time\.apple\.com$
-(^|\.)time\.google\.com$
-(^|\.)time\.windows\.com$
-(^|\.)pool\.ntp\.org$
+@@||time.apple.com^
+@@||time.google.com^
+@@||time.windows.com^
+@@||pool.ntp.org^
 
 ##########################################
-# NEWS & INFORMATION (REGEX WILDCARDS)
+# NEWS & INFORMATION (ABP-STYLE)
 ##########################################
-(^|\.)bbc\.com$
-(^|\.)cnn\.com$
-(^|\.)npr\.org$
-(^|\.)reuters\.com$
-(^|\.)ap\.org$
+@@||bbc.com^
+@@||cnn.com^
+@@||npr.org^
+@@||reuters.com^
+@@||ap.org^
 
 ##########################################
-# BANKING & FINANCE ESSENTIALS (REGEX WILDCARDS)
+# BANKING & FINANCE ESSENTIALS (ABP-STYLE)
 ##########################################
-(^|\.)paypal\.com$
-(^|\.)stripe\.com$
+@@||paypal.com^
+@@||stripe.com^
 
 ##########################################
-# SECURITY & UPDATES (REGEX WILDCARDS)
+# SECURITY & UPDATES (ABP-STYLE)
 ##########################################
-(^|\.)mozilla\.org$
-(^|\.)mozilla\.net$
-(^|\.)firefox\.com$
-(^|\.)gravatar\.com$
+@@||mozilla.org^
+@@||mozilla.net^
+@@||firefox.com^
+@@||gravatar.com^

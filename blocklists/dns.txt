@@ -1,110 +1,110 @@
 # ===========================
 # 10-APPLE-PRIVATE-RELAY
 # ===========================
-(^|\.)mask\.icloud\.com$
-(^|\.)mask-h2\.icloud\.com$
-(^|\.)mask\.apple-dns\.net$
-(^|\.)mask-t\.apple-dns\.net$
-(^|\.)mask-submissions\.apple\.com$
-(^|\.)private\.relay\.apple\.com$
-(^|\.)relay\.icloud\.com$
-(^|\.)mask-api\.icloud\.com$
-(^|\.)ess\.apple\.com$
-(^|\.)xp-cdn\.apple\.com$
-(^|\.)cpms\.siri\.apple\.com$
-(^|\.)gateway\.icloud\.com$
+||mask.icloud.com^
+||mask-h2.icloud.com^
+||mask.apple-dns.net^
+||mask-t.apple-dns.net^
+||mask-submissions.apple.com^
+||private.relay.apple.com^
+||relay.icloud.com^
+||mask-api.icloud.com^
+||ess.apple.com^
+||xp-cdn.apple.com^
+||cpms.siri.apple.com^
+||gateway.icloud.com^
 
 # ===========================
 # 20-GOOGLE-DOH
 # ===========================
-(^|\.)dns\.google$
-(^|\.)dns\.google\.com$
-(^|\.)chrome\.cloudflare-dns\.com$
-(^|\.)cloudflare-dns\.com$
-(^|\.)dns\.quad9\.net$
-(^|\.)dns9\.quad9\.net$
-(^|\.)dns10\.quad9\.net$
-(^|\.)dns\.nextdns\.io$
-(^|\.)dns\.opendns\.com$
-(^|\.)dns\.adguard\.com$
-(^|\.)googleapis\.com$
+||dns.google^
+||dns.google.com^
+||chrome.cloudflare-dns.com^
+||cloudflare-dns.com^
+||dns.quad9.net^
+||dns9.quad9.net^
+||dns10.quad9.net^
+||dns.nextdns.io^
+||dns.opendns.com^
+||dns.adguard.com^
+||googleapis.com^
 
 # ===========================
 # 30-FIREFOX-DOH
 # ===========================
-(^|\.)mozilla\.cloudflare-dns\.com$
-(^|\.)use-application-dns\.net$
-(^|\.)mozilla\.net$
-(^|\.)cloudflare-dns\.com$
-(^|\.)mozilla-dns\.com$
-(^|\.)firefox\.dns$
+||mozilla.cloudflare-dns.com^
+||use-application-dns.net^
+||mozilla.net^
+||cloudflare-dns.com^
+||mozilla-dns.com^
+||firefox.dns^
 
 # ===========================
 # 40-WINDOWS-DOH
 # ===========================
-(^|\.)dns\.quad9\.net$
-(^|\.)dns\.google$
-(^|\.)dns\.google\.com$
-(^|\.)dns\.cloudflare\.com$
-(^|\.)cloudflare-dns\.com$
-(^|\.)dns\.nextdns\.io$
-(^|\.)dns\.opendns\.com$
-(^|\.)resolver\.msft\.net$
-(^|\.)vortex-win\.data\.microsoft\.com$
+||dns.quad9.net^
+||dns.google^
+||dns.google.com^
+||dns.cloudflare.com^
+||cloudflare-dns.com^
+||dns.nextdns.io^
+||dns.opendns.com^
+||resolver.msft.net^
+||vortex-win.data.microsoft.com^
 
 # ===========================
 # 50-SMARTTV-DNS-BYPASS
 # ===========================
 # Samsung
-(^|\.)samsungcloudsolution\.com$
-(^|\.)samsung-dns\.com$
-(^|\.)samsungrs\.com$
-(^|\.)time\.samsung\.com$
-(^|\.)log-config\.samsungacr\.com$
-(^|\.)ads\.samsungads\.com$
+||samsungcloudsolution.com^
+||samsung-dns.com^
+||samsungrs.com^
+||time.samsung.com^
+||log-config.samsungacr.com^
+||ads.samsungads.com^
 
 # LG
-(^|\.)lgsmartad\.com$
-(^|\.)lgtvswcdn\.com$
-(^|\.)lgtvcommon\.com$
-(^|\.)lgchannelepg\.com$
+||lgsmartad.com^
+||lgtvswcdn.com^
+||lgtvcommon.com^
+||lgchannelepg.com^
 
 # Vizio
-(^|\.)vizio\.com$
-(^|\.)vizioads\.com$
-(^|\.)smartcast\.tv$
+||vizio.com^
+||vizioads.com^
+||smartcast.tv^
 
 # Roku
-(^|\.)api\.roku\.com$
-(^|\.)cloudservices\.roku\.com$
-(^|\.)prod\.cloudservices\.roku\.com$
+||api.roku.com^
+||cloudservices.roku.com^
+||prod.cloudservices.roku.com^
 
 # ===========================
 # 60-IOT-CLOUD-TETHERING
 # ===========================
 # Philips Hue
-(^|\.)phoscon\.de$
-(^|\.)meethue\.com$
-(^|\.)diag\.meethue\.com$
-(^|\.)bootstrap\.hcp\.io$
+||phoscon.de^
+||meethue.com^
+||diag.meethue.com^
+||bootstrap.hcp.io^
 
 # Wyze
-(^|\.)wyze-prod\.s3\.amazonaws\.com$
-(^|\.)wyze-device-alexa\.amazonaws\.com$
-(^|\.)wyze-ecosystem\.com$
+||wyze-prod.s3.amazonaws.com^
+||wyze-device-alexa.amazonaws.com^
+||wyze-ecosystem.com^
 
 # Ring
-(^|\.)ring\.com$
-(^|\.)cloudfront\.net$
-(^|\.)ringvideo\.cloudfront\.net$
+||ring.com^
+||cloudfront.net^
+||ringvideo.cloudfront.net^
 
 # Amazon / Alexa
-(^|\.)alexa\.amazon\.com$
-(^|\.)device-metrics-us\.amazon\.com$
-(^|\.)softwareupdates\.amazon\.com$
+||alexa.amazon.com^
+||device-metrics-us.amazon.com^
+||softwareupdates.amazon.com^
 
 # Google Home / Nest
-(^|\.)connectivitycheck\.gstatic\.com$
-(^|\.)connectivitycheck\.android\.com$
-(^|\.)clients3\.google\.com$
-(^|\.)dns\.google$
+||connectivitycheck.gstatic.com^
+||connectivitycheck.android.com^
+||clients3.google.com^
+||dns.google^

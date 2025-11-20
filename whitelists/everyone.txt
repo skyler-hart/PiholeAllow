@@ -17,7 +17,7 @@
 @@||dropboxapi.com^
 @@||onedrive.live.com^
 @@||vzw.com^
-@@||icloud.com
+@@||icloud.com^
 
 # Video Streaming (Family-friendly)
 @@||netflix.com^

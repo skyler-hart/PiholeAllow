@@ -33,13 +33,15 @@
 ||betmgm.com^
 ||pointsbet.com^
 
-# Malicious/Scam Sites (ABP-style with wildcards)
+# Malicious/Scam Sites (ABP-style with specific examples)
 ||freeiptvplayer.com^
 ||virus-protection-2024.com^
-||*fake-security-alert*.com^
-||*malware-alert*.com^
-||*your-computer-infected*.com^
-||*urgent-update-required*.com^
+||fake-security-alert.com^
+||malware-alert.net^
+||your-computer-infected.org^
+||urgent-update-required.com^
+||security-alert.fake^
+||windows-defender-alert.com^
 
 # Cryptocurrency Mining (ABP-style)
 ||coinhive.com^
@@ -49,7 +51,9 @@
 ||authedmine.com^
 ||coin-hive.com^
 ||minero.cc^
-||*webmine*.com^
+||webmine.com^
+||cryptomine.com^
+||coinmine.com^
 
 # Tracking & Invasive Advertising (ABP-style)
 ||doubleclick.net^
@@ -57,10 +61,10 @@
 ||googlesyndication.com^
 ||scorecardresearch.com^
 ||google-analytics.com^
-||facebook.com/tr/
+||facebook.com/tr/^
 ||outbrain.com^
 ||taboola.com^
-||*adsystem*.com^
+||adsystem.com^
 
 # Potentially Harmful Social Media Features (ABP-style)
 ||onlyfans.com^
@@ -72,14 +76,15 @@
 
 # Hate Speech & Extremist Content (ABP-style)
 ||8kun.top^
-||*8chan*.org^
+||8chan.org^
+||8ch.net^
 ||gab.com^
 
 # Dangerous Challenges (ABP-style)
-||tiktok.com/tag/dangerouschallenge
-||tiktok.com/tag/suicide
-||tiktok.com/tag/selfharm
-||youtube.com/*dangerous*challenge*
+||tiktok.com/tag/dangerouschallenge^
+||tiktok.com/tag/suicide^
+||tiktok.com/tag/selfharm^
+||youtube.com/watch*dangerous*challenge*^
 
 # Drug-related Content (ABP-style)
 ||leafly.com^
@@ -90,17 +95,23 @@
 ##########################################
 # PHISHING & FAKE SITES (ABP-style)
 ##########################################
-||*paypal-security*.com^
-||*amazon-security*.com^
-||*apple-security*.com^
-||*microsoft-security*.com^
-||*bank-security*.com^
+||paypal-security.com^
+||amazon-security.net^
+||apple-security.org^
+||microsoft-security.com^
+||bank-security.net^
+||secure-paypal.com^
+||amazon-verify.com^
+||apple-verify.net^
 
 ##########################################
 # MALWARE & VIRUS DISTRIBUTION (ABP-style)
 ##########################################
-||*malwaredomainlist*.com^
-||*virusdownload*.com^
-||*trojanhorse*.com^
-||*backdoor*.com^
+||malwaredomainlist.com^
+||virusdownload.org^
+||trojanhorse.net^
+||backdoor.com^
+||malware-download.com^
+||virus-scanner.fake^
+||trojan-removal.org^
 

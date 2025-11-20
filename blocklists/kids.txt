@@ -75,9 +75,12 @@
 ||kproxy.com^
 ||filterbypass.me^
 ||vtunnel.com^
-||*proxy*.com^
-||*vpn*.com^
-||*unblock*.com^
+||freeproxy.com^
+||webproxy.com^
+||proxysite.com^
+||freevpn.com^
+||supervpn.com^
+||holavpn.com^
 
 # Mature Music Content
 ||soundcloud.com^
@@ -86,7 +89,7 @@
 ||knowyourmeme.com^
 
 # Potentially Dangerous DIY
-||instructables.com/circuits/howto
+||instructables.com/circuits/howto^
 
 # Anonymous Forums
 ||8kun.top^
@@ -102,7 +105,9 @@
 ||torproject.org^
 
 # Additional VPN/Proxy Bypass Prevention
-||*bypass*.com^
-||*hide*.me^
-||*anonymous*.com^
-||*tunnel*.com^
+||filterbypass.me^
+||unblocksite.org^
+||anonymouse.org^
+||hidemyass.com^
+||tunnelbear.com^
+||hide.me^

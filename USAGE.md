@@ -1,206 +1,444 @@
-# Quick Start Guide
+# Pi-hole Allow/Block Lists - Usage Guide
 
-## Which List Should I Use?
+## Overview
 
-### Scenario 1: Children's Devices (iPad, kids' computer)
-**Use:** `kids-only.txt`
-- Includes: Family-wide sites + Kids-specific content
-- Blocks: Adult-only services (financial, work tools, etc.)
-- **URL:** `https://raw.githubusercontent.com/skyler-hart/PiholeAllow/main/lists/kids-only.txt`
+This repository provides curated **ABP-style** (Adblock Plus format) lists for Pi-hole to manage family internet access. All lists use the modern `||domain.com^` and `@@||domain.com^` syntax for better compatibility and wildcard support.
 
-### Scenario 2: Parent Devices (laptop, phone)
-**Use:** `adults-only.txt`
-- Includes: Family-wide sites + Adult services
-- Does not include: Kids-specific game/entertainment sites
-- **URL:** `https://raw.githubusercontent.com/skyler-hart/PiholeAllow/main/lists/adults-only.txt`
+## File Structure
 
-### Scenario 3: Shared Family Devices (living room TV, shared tablet)
-**Use:** `all-family.txt`
-- Includes: Everything (family + kids + adults)
-- **URL:** `https://raw.githubusercontent.com/skyler-hart/PiholeAllow/main/lists/all-family.txt`
+### 📁 **Whitelists (Allow Lists)**
+- `whitelists/everyone.txt` - Family-wide allowed domains (all family members)
+- `whitelists/adults.txt` - Adult-only allowed domains (parents/guardians)  
+- `whitelists/kids.txt` - Kid-specific allowed domains (educational/safe content)
+
+### 🚫 **Blocklists**
+- `blocklists/everyone.txt` - Family-wide blocked domains (harmful content for all)
+- `blocklists/kids.txt` - Additional blocks for children (social media, mature content)
+- `blocklists/dns.txt` - DNS bypass prevention (DoH, private relay, smart TV hardcoded DNS)
+
+## ABP-Style Format
+
+All lists now use **ABP (Adblock Plus) syntax** for better Pi-hole compatibility:
+
+### **Allowlist Format:**
+```
+# Allow domain and all subdomains
+@@||google.com^
+@@||youtube.com^
+@@||khanacademy.org^
+```
+
+### **Blocklist Format:**
+```
+# Block domain and all subdomains
+||pornhub.com^
+||gambling-site.com^
+
+# Block with wildcards
+||*ads*.com^
+||*tracking*.net^
+```
+
+### **Benefits of ABP Format:**
+- ✅ **Subdomain coverage** - Automatically handles `www.domain.com`, `mail.domain.com`, etc.
+- ✅ **Wildcard support** - Use `*` for pattern matching
+- ✅ **Override capability** - Allowlists take precedence over blocklists
+- ✅ **Pi-hole native** - Parsed as "ABP-style domains" instead of "non-domain entries"
+
+## Recommended Setup Scenarios
+
+### 🧒 **Scenario 1: Children's Devices** (iPad, kids' computer)
+**Recommended Lists:**
+- **Allowlist:** `whitelists/everyone.txt` + `whitelists/kids.txt`
+- **Blocklist:** `blocklists/everyone.txt` + `blocklists/kids.txt` + `blocklists/dns.txt`
+- **Result:** Educational content + family-safe sites, blocks adult content + social media + DNS bypass
+
+**URLs:**
+```
+https://raw.githubusercontent.com/skyler-hart/PiholeAllow/main/whitelists/everyone.txt
+https://raw.githubusercontent.com/skyler-hart/PiholeAllow/main/whitelists/kids.txt
+https://raw.githubusercontent.com/skyler-hart/PiholeAllow/main/blocklists/everyone.txt
+https://raw.githubusercontent.com/skyler-hart/PiholeAllow/main/blocklists/kids.txt
+https://raw.githubusercontent.com/skyler-hart/PiholeAllow/main/blocklists/dns.txt
+```
+
+### 👨‍👩‍👧‍👦 **Scenario 2: Parent Devices** (laptop, phone)
+**Recommended Lists:**
+- **Allowlist:** `whitelists/everyone.txt` + `whitelists/adults.txt`
+- **Blocklist:** `blocklists/everyone.txt` + `blocklists/dns.txt`
+- **Result:** Full adult access including work/financial services, blocks harmful content + DNS bypass
+
+**URLs:**
+```
+https://raw.githubusercontent.com/skyler-hart/PiholeAllow/main/whitelists/everyone.txt
+https://raw.githubusercontent.com/skyler-hart/PiholeAllow/main/whitelists/adults.txt
+https://raw.githubusercontent.com/skyler-hart/PiholeAllow/main/blocklists/everyone.txt
+https://raw.githubusercontent.com/skyler-hart/PiholeAllow/main/blocklists/dns.txt
+```
+
+### 📺 **Scenario 3: Shared Family Devices** (living room TV, shared tablet)
+**Recommended Lists:**
+- **Allowlist:** `whitelists/everyone.txt` only
+- **Blocklist:** `blocklists/everyone.txt` + `blocklists/dns.txt`
+- **Result:** Family-friendly content for all ages, blocks harmful content + smart TV DNS bypass
+
+**URLs:**
+```
+https://raw.githubusercontent.com/skyler-hart/PiholeAllow/main/whitelists/everyone.txt
+https://raw.githubusercontent.com/skyler-hart/PiholeAllow/main/blocklists/everyone.txt
+https://raw.githubusercontent.com/skyler-hart/PiholeAllow/main/blocklists/dns.txt
+```
+
+### 🔒 **Scenario 4: Maximum Security Setup**
+**Recommended Lists:**
+- **Allowlist:** `whitelists/everyone.txt` + specific user lists
+- **Blocklist:** ALL lists (`blocklists/everyone.txt` + `blocklists/kids.txt` + `blocklists/dns.txt`)
+- **Result:** Strictest filtering, prevents all bypasses, curated safe content only
 
 ## Step-by-Step Pi-hole Setup
 
-### For Pi-hole with Web Interface
+### Method 1: Web Interface (Recommended)
 
-1. **Access your Pi-hole admin panel**
-   - Open browser: `http://pi.hole/admin` or `http://YOUR_PI_IP/admin`
-   - Log in with your password
-
-2. **Navigate to Allowlist**
-   - Click **Group Management** in the left sidebar
-   - Click **Adlists**
-
-3. **Add your chosen list**
-   - Copy one of the URLs above
-   - Paste into the "Address" field
-   - Add a comment (e.g., "Family Allow List - Kids")
+#### Adding Allowlists
+1. **Access Pi-hole admin panel:** `http://pi.hole/admin` or `http://YOUR_PI_IP/admin`
+2. **Navigate:** Group Management → Adlists
+3. **Add allowlist:** 
+   - Paste allowlist URL in "Address" field
+   - Comment: "Family Allow - Everyone" (or similar)
    - Click **Add**
+4. **Repeat** for each allowlist you need
 
-4. **Update Gravity**
-   - Go to **Tools** → **Update Gravity**
-   - Click **Update**
-   - Wait for the process to complete
+#### Adding Blocklists  
+1. **Navigate:** Group Management → Adlists
+2. **Add blocklist:**
+   - Paste blocklist URL in "Address" field  
+   - Comment: "Family Block - Everyone" (or similar)
+   - Click **Add**
+3. **Repeat** for each blocklist you need
 
-5. **Verify**
-   - Go to **Dashboard**
-   - Check that domains are being allowed
+#### Update and Verify
+1. **Update Gravity:** Tools → Update Gravity → **Update**
+2. **Check results:** Should show "X ABP-style domains" parsed
+3. **Test:** Tools → Query Lists → Test a domain
 
-### For Pi-hole via Command Line
+### Method 2: Command Line
 
+#### Using ABP Lists Directly
 ```bash
-# SSH into your Pi-hole server
-ssh pi@YOUR_PI_IP
+# Pi-hole now supports ABP lists natively via Adlists
+# Add via web interface or sqlite database
 
-# Download the list you want
-wget https://raw.githubusercontent.com/skyler-hart/PiholeAllow/main/lists/kids-only.txt -O /tmp/allow.txt
+# Add allowlist to Pi-hole
+sqlite3 /etc/pihole/gravity.db "INSERT INTO adlist (address, comment) VALUES ('https://raw.githubusercontent.com/skyler-hart/PiholeAllow/main/whitelists/everyone.txt', 'Family Allow - Everyone');"
 
-# Add each domain to Pi-hole
-while read domain; do
-  # Skip comments and empty lines
-  [[ "$domain" =~ ^#.*$ ]] && continue
-  [[ -z "$domain" ]] && continue
-  pihole -w "$domain"
-done < /tmp/allow.txt
+# Add blocklist to Pi-hole  
+sqlite3 /etc/pihole/gravity.db "INSERT INTO adlist (address, comment) VALUES ('https://raw.githubusercontent.com/skyler-hart/PiholeAllow/main/blocklists/everyone.txt', 'Family Block - Everyone');"
 
-# Update gravity
+# Update gravity to process ABP lists
 pihole -g
 
-# Verify
-pihole -q google.com
+# Verify ABP parsing
+tail /var/log/pihole.log | grep "ABP-style"
 ```
 
-## Advanced Setup: Using Groups
+#### Legacy Method (Manual Domain Addition)
+```bash
+# Only use if ABP lists don't work with your Pi-hole version
+# Download and process allowlist
+curl -s https://raw.githubusercontent.com/skyler-hart/PiholeAllow/main/whitelists/everyone.txt | \
+  grep -E '^@@\|\|.*\^$' | \
+  sed 's/^@@||//;s/\^$//' | \
+  while read domain; do pihole -w "$domain"; done
+
+# Download and process blocklist  
+curl -s https://raw.githubusercontent.com/skyler-hart/PiholeAllow/main/blocklists/everyone.txt | \
+  grep -E '^\|\|.*\^$' | \
+  sed 's/^||//;s/\^$//' | \
+  while read domain; do pihole -b "$domain"; done
+```
+
+## Advanced Setup: Using Pi-hole Groups
 
 For families with multiple devices needing different access levels:
 
 ### Step 1: Create Groups
-```bash
-# Access your Pi-hole admin panel
-# Go to Group Management → Groups
-# Create groups: Kids, Adults, Everyone
-```
+1. **Web Interface:** Group Management → Groups
+2. **Create groups:** 
+   - `Kids` (children's devices)
+   - `Adults` (parent devices)  
+   - `Family` (shared devices)
 
 ### Step 2: Assign Devices to Groups
-```bash
-# Go to Group Management → Clients
-# Add each device's IP or MAC address
-# Assign to appropriate group
-```
+1. **Web Interface:** Group Management → Clients
+2. **Add each device:**
+   - Enter IP address or MAC address
+   - Assign to appropriate group(s)
+   - Enable/disable as needed
 
-### Step 3: Add Lists to Groups
-```bash
-# Go to Group Management → Adlists
-# For each list, select which groups can access it
-```
+### Step 3: Assign Lists to Groups
+1. **Web Interface:** Group Management → Adlists  
+2. **For each list, select target groups:**
+   - Everyone allowlist → All groups
+   - Kids allowlist → Kids group only
+   - Adults allowlist → Adults group only
+   - DNS blocklist → All groups
 
-### Example Configuration:
-- **Kids' iPad** → Kids group → `kids-only.txt`
-- **Mom's laptop** → Adults group → `adults-only.txt`
-- **Dad's phone** → Adults group → `adults-only.txt`
-- **Living room TV** → Everyone group → `all-family.txt`
+### Example Multi-Group Configuration:
+
+| Device | Groups | Allowlists | Blocklists |
+|--------|---------|------------|------------|
+| **Kids' iPad** | `Kids` | `everyone.txt` + `kids.txt` | `everyone.txt` + `kids.txt` + `dns.txt` |
+| **Mom's laptop** | `Adults` | `everyone.txt` + `adults.txt` | `everyone.txt` + `dns.txt` |
+| **Dad's phone** | `Adults` | `everyone.txt` + `adults.txt` | `everyone.txt` + `dns.txt` |
+| **Living room TV** | `Family` | `everyone.txt` | `everyone.txt` + `dns.txt` |
 
 ## Customization
 
-### Adding Your Own Domains
+### Forking and Customizing Lists
 
 1. **Fork this repository** (click Fork button on GitHub)
 
-2. **Edit the appropriate file:**
-   - `lists/everyone.txt` - for family-wide domains
-   - `lists/kids.txt` - for kid-specific domains
-   - `lists/adults.txt` - for adult-specific domains
+2. **Edit files for your needs:**
+   - `whitelists/everyone.txt` - Add family-wide domains
+   - `whitelists/kids.txt` - Add educational sites
+   - `whitelists/adults.txt` - Add work/professional domains
+   - `blocklists/everyone.txt` - Add harmful domains to block
+   - `blocklists/kids.txt` - Add age-inappropriate content
 
-3. **Add your domain** (one per line):
+3. **Use ABP syntax:**
    ```
-   example.com
-   another-site.com
+   # Allowlist entries
+   @@||my-custom-site.com^
+   @@||educational-game.org^
+   
+   # Blocklist entries  
+   ||bad-site.com^
+   ||*ads*.unwanted-domain.net^
    ```
 
-4. **Commit and push** your changes
-
-5. **Update your Pi-hole URL** to use your fork:
+4. **Update your Pi-hole URLs** to use your fork:
    ```
-   https://raw.githubusercontent.com/YOUR_USERNAME/PiholeAllow/main/lists/kids-only.txt
+   https://raw.githubusercontent.com/YOUR_USERNAME/PiholeAllow/main/whitelists/everyone.txt
    ```
 
-### Removing Domains
+### Adding Your Own Domains
 
-Edit the list files and delete the lines you don't want, then update Gravity in Pi-hole.
+**For Allowlists (whitelists):**
+```
+@@||my-work-site.com^
+@@||family-blog.net^  
+@@||kids-educational-app.org^
+```
+
+**For Blocklists:**
+```
+||unwanted-site.com^
+||*tracking*.badcompany.net^
+||social-media-distraction.com^
+```
+
+### Understanding ABP Wildcards
+
+```
+# Exact domain and subdomains
+@@||example.com^          # Allows example.com, www.example.com, api.example.com
+
+# Wildcard patterns
+||*ads*.com^              # Blocks any domain containing "ads" 
+||*tracking*.net^         # Blocks tracking-related domains
+@@||*educational*.org^    # Allows educational domains
+```
 
 ## Troubleshooting
 
-### Domain Still Blocked
-1. Check if the domain is in your blocklist: `pihole -q example.com`
-2. Add manually: `pihole -w example.com`
-3. Update gravity: `pihole -g`
+### Expected Gravity Output
+When lists are working correctly, you should see:
+```
+[✓] Parsed 0 exact domains and 150+ ABP-style domains 
+    (allowlisting/blocking, ignored 0 non-domain entries)
+```
 
-### Too Many Domains Allowed
-1. Review your allow list
-2. Remove unwanted domains
-3. Consider using a more restrictive list (e.g., switch from `all-family.txt` to `kids-only.txt`)
+### Common Issues
 
-### Lists Not Updating
-1. Check your internet connection
-2. Verify the GitHub URL is correct
-3. Try updating manually: `pihole -g`
-4. Check Pi-hole logs: `/var/log/pihole.log`
+#### "Non-domain entries" in Gravity
+**Problem:** `ignored X non-domain entries`
+**Cause:** Regex patterns `(^|\.)domain\.com$` instead of ABP format
+**Solution:** Ensure all entries use ABP syntax:
+- Allowlist: `@@||domain.com^`  
+- Blocklist: `||domain.com^`
+
+#### Domain Still Blocked
+```bash
+# Check domain status
+pihole -q example.com
+
+# Add manually to allowlist
+pihole -w example.com
+
+# Update gravity and test
+pihole -g
+pihole -q example.com
+```
+
+#### Lists Not Updating
+1. **Check internet connection** on Pi-hole device
+2. **Verify URLs** are correct and accessible
+3. **Manual update:** Tools → Update Gravity
+4. **Check logs:** `/var/log/pihole.log`
+
+#### ABP Lists Not Parsing
+1. **Update Pi-hole:** Ensure you have a recent version supporting ABP
+2. **Check format:** Verify all entries use proper `@@||` or `||` syntax
+3. **Test individual domains:** Add manually to verify functionality
+
+### DNS Bypass Still Working
+If devices are still bypassing Pi-hole despite `dns.txt` blocklist:
+1. **Check if DNS blocklist is active** in Group Management → Adlists
+2. **Verify device DNS settings** point to Pi-hole IP only
+3. **Router configuration:** Set Pi-hole as DHCP DNS server
+4. **Firewall rules:** Block outbound DNS (port 53) to non-Pi-hole IPs
+
+### Smart TV Still Shows Ads
+1. **Confirm `dns.txt` blocklist is enabled**
+2. **Check TV network settings** - should use Pi-hole DNS only
+3. **Router-level enforcement:** Block all DNS except Pi-hole
+4. **TV-specific:** Some apps use hardcoded IPs, may need additional blocking
 
 ## Maintenance
 
-### Keeping Lists Updated
+### Automatic Updates
+Pi-hole automatically updates lists weekly. **No manual action needed** for most users.
 
-Pi-hole automatically updates lists weekly. To manually update:
-
-**Web Interface:**
-1. Go to Tools → Update Gravity
-2. Click Update
+### Manual Updates
+**Web Interface:** Tools → Update Gravity → **Update**
 
 **Command Line:**
 ```bash
 pihole -g
 ```
 
-### Checking What's Allowed
+### Monitoring and Verification
 
+#### Check What's Allowed/Blocked
 ```bash
-# Query a specific domain
+# Query specific domain
 pihole -q example.com
 
-# View all allowed domains
+# View allowlist
 pihole -w -l
+
+# View blocklist  
+pihole -b -l
+
+# Check recent queries
+pihole tail
 ```
 
-## Example Use Cases
-
-### Case 1: Homework Mode
-Create a temporary strict list for homework time by using only `everyone.txt` without kids games:
+#### Verify ABP Parsing
 ```bash
-# Remove kids gaming sites temporarily
-pihole -b roblox.com minecraft.net
-# Add them back later
-pihole -w roblox.com minecraft.net
+# Check gravity output for ABP domains
+tail -f /var/log/pihole.log | grep -i "abp\|parsed"
+
+# Should show: "Parsed X exact domains and Y ABP-style domains"
 ```
 
-### Case 2: Bedtime Restrictions
-Use Pi-hole groups with time-based filtering (requires additional setup) to restrict access after bedtime.
+#### Monitor Family Usage
+1. **Dashboard:** View query statistics and top domains
+2. **Long-term data:** Analyze family browsing patterns
+3. **Query log:** Real-time monitoring of requests
 
-### Case 3: Vacation Mode
-Switch to `all-family.txt` for relaxed filtering during holidays, then back to stricter lists for school days.
+### Updating Your Fork
+If you forked this repository:
+```bash
+# Keep your fork updated with latest changes
+git remote add upstream https://github.com/skyler-hart/PiholeAllow.git
+git fetch upstream  
+git checkout main
+git merge upstream/main
+git push origin main
+```
 
-## Support
+## Example Family Configurations
 
-If you encounter issues:
-1. Check Pi-hole documentation: https://docs.pi-hole.net/
-2. Review this guide
-3. Open an issue on GitHub
-4. Check Pi-hole community forums
+### 📚 **Education-First Family**
+**Goal:** Prioritize learning, limit entertainment
+```
+Kids devices: everyone.txt + kids.txt + everyone-block.txt + kids-block.txt + dns.txt
+Parent devices: everyone.txt + adults.txt + everyone-block.txt + dns.txt
+Shared devices: everyone.txt + everyone-block.txt + dns.txt
+```
 
-## Best Practices
+### 🎮 **Balanced Family**  
+**Goal:** Mix of education and entertainment
+```
+Kids devices: everyone.txt + kids.txt + everyone-block.txt + dns.txt
+Parent devices: everyone.txt + adults.txt + everyone-block.txt + dns.txt
+Gaming devices: everyone.txt + everyone-block.txt + dns.txt
+```
 
-1. **Test before full deployment** - Try lists on one device first
-2. **Keep lists updated** - Pull latest changes regularly
-3. **Customize for your family** - Fork and modify lists as needed
-4. **Monitor usage** - Review Pi-hole logs to see what's being blocked/allowed
-5. **Communicate with family** - Let everyone know about filtering rules
-6. **Regular reviews** - Update lists as kids grow and needs change
+### 🔒 **Security-Focused Family**
+**Goal:** Maximum protection and privacy
+```
+All devices: everyone.txt + respective user lists + ALL blocklists
+Router: Additional firewall rules blocking DNS bypass
+Network: VPN + Pi-hole for double protection
+```
+
+### 👶 **Young Children Family**
+**Goal:** Very restrictive, educational content only
+```
+Kids devices: kids.txt only + ALL blocklists
+Parent devices: everyone.txt + adults.txt + everyone-block.txt + dns.txt
+Shared devices: kids.txt + everyone-block.txt + kids-block.txt + dns.txt
+```
+
+## Support & Resources
+
+### Getting Help
+1. **Pi-hole Documentation:** https://docs.pi-hole.net/
+2. **Pi-hole Community:** https://discourse.pi-hole.net/
+3. **This Repository Issues:** https://github.com/skyler-hart/PiholeAllow/issues
+4. **ABP Filter Syntax:** https://help.adblockplus.org/hc/en-us/articles/360062733293
+
+### Quick Reference
+
+#### File Purposes
+| File | Purpose | Format | Target |
+|------|---------|---------|---------|
+| `whitelists/everyone.txt` | Family-safe domains for all | `@@\|\|domain.com^` | All family members |
+| `whitelists/kids.txt` | Educational/kid-specific domains | `@@\|\|domain.com^` | Children only |
+| `whitelists/adults.txt` | Work/adult-oriented domains | `@@\|\|domain.com^` | Parents/guardians |
+| `blocklists/everyone.txt` | Harmful content for all | `\|\|domain.com^` | All family members |
+| `blocklists/kids.txt` | Age-inappropriate content | `\|\|domain.com^` | Children's devices |
+| `blocklists/dns.txt` | DNS bypass prevention | `\|\|domain.com^` | All devices |
+
+#### ABP Syntax Quick Reference
+```bash
+# Allowlist (whitelist) entries
+@@||domain.com^           # Allow domain and all subdomains
+@@||specific.domain.com^  # Allow specific subdomain only
+@@||domain.com/path       # Allow specific path
+
+# Blocklist entries  
+||domain.com^             # Block domain and all subdomains
+||*keyword*.com^          # Block any domain containing "keyword"
+||domain.com/ads/         # Block specific path only
+```
+
+### Best Practices Summary
+
+1. ✅ **Start with everyone.txt** for all devices, then add user-specific lists
+2. ✅ **Always include dns.txt** blocklist to prevent bypassing  
+3. ✅ **Test on one device first** before deploying family-wide
+4. ✅ **Use groups** for different family members with different needs
+5. ✅ **Monitor Pi-hole logs** to catch blocked essential services
+6. ✅ **Keep lists updated** by enabling automatic gravity updates
+7. ✅ **Communicate with family** about filtering rules and exceptions
+8. ✅ **Regular review** - adjust lists as children grow and needs change
+
+### Version Requirements
+- **Pi-hole:** v5.0+ recommended for full ABP support
+- **Lists:** All lists are ABP-style format compatible
+- **Legacy Pi-hole:** Use manual domain addition method if ABP parsing fails
+
+---

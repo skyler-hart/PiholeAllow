@@ -60,6 +60,7 @@ webull.com
 # Forums with Mature Content
 quora.com
 medium.com
+(^|\.)4chan\.org$
 
 # Shopping Without Supervision
 ebay.com

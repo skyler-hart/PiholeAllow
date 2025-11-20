@@ -7,75 +7,230 @@ google.com
 youtube.com
 wikipedia.org
 github.com
-www.googleapis.com
-youtubei.googleapis.com
-oauthaccountmanager.googleapis.com
-gstaticadssl.l.google.com
-fonts.google.com
-googleapis.l.google.com
-dl.google.com
 pinterest.com
-weather.com
+#weather.com
 mapbox.com
-discovery.meethue.com
-
-# Email Services
-gmail.com
-outlook.com
-mail.google.com
+cloudflare.com
 
 # Cloud Storage
-drive.google.com
 dropbox.com
 dropboxapi.com
-onedrive.live.com
-data.microsoft.com
-icloud.com
-icloud-content.com
-wyzecam.com
-api.wyze.com
+#onedrive.live.com
 vzw.com
 
 # Video Streaming (Family-friendly)
 netflix.com
 disneyplus.com
 disney-plus.net
-registerdisney.go.com
-disney-portal.my.onetrust.com
-disneyplus.bn5x.net
+#registerdisney.go.com
+#disney-portal.my.onetrust.com
+#disneyplus.bn5x.net
 hulu.com
 paramountplus.com
 primevideo.com
 services.sonarr.tv
+youtube.com
+youtubetv.com
 
 # Educational
 khanacademy.org
 duolingo.com
 coursera.org
 udemy.com
+edx.org
+codecademy.com
+brilliant.org
 
 # Social Media (supervised)
 facebook.com
 instagram.com
 twitter.com
+x.com
 
 # Shopping
 amazon.com
 ebay.com
-target.com
-walmart.com
-etsy.com
+(^|\.)target\.com$
+(^|\.)walmart\.com$
+(^|\.)etsy\.com$
+(^|\.)costco\.com$
+(^|\.)bestbuy\.com$
 
-# Gaming (family-friendly)
-minecraft.net
-nintendo.com
 
-# Productivity
-office.com
-docs.google.com
-sheets.google.com
-slides.google.com
+##########################################
+# APPLE-CORE-SERVICES (REGEX WILDCARDS)
+##########################################
+(^|\.)apple\.com$
+(^|\.)icloud-content\.com$
+(^|\.)appleid\.apple\.com$
+(^|\.)api\.apple-cloudkit\.com$
+(^|\.)configuration\.apple\.com$
+(^|\.)init-p01md\.apple\.com$
+(^|\.)gsa\.apple\.com$
+(^|\.)static\.ips\.apple\.com$
+(^|\.)gs\.apple\.com$
+(^|\.)captive\.apple\.com$
+(^|\.)cdn-apple\.com$
+(^|\.)cds\.apple\.com$
+(^|\.)push\.apple\.com$
+(^|\.)xp\.apple\.com$
+(^|\.)ocsp\.apple\.com$
+(^|\.)ocsp2\.apple\.com$
+(^|\.)itunes\.apple\.com$
 
-# Crap
-# www.googleadservices.com
-# ad.doubleclick.net
+# IMPORTANT: do NOT wildcard icloud.com itself
+# This keeps mask.icloud.com and other DoH services blockable.
+icloud.com
+
+##########################################
+# GOOGLE-CORE-SERVICES (REGEX WILDCARDS)
+##########################################
+(^|\.)google\.com$
+(^|\.)gstatic\.com$
+(^|\.)googleapis\.com$
+(^|\.)firebaseinstallations\.googleapis\.com$
+(^|\.)fcm\.googleapis\.com$
+(^|\.)fcm\.google\.com$
+(^|\.)mtalk\.google\.com$
+(^|\.)clients4\.google\.com$
+(^|\.)clients5\.google\.com$
+(^|\.)android\.clients\.google\.com$
+(^|\.)dl\.google\.com$
+(^|\.)dl\.l\.google\.com$
+(^|\.)fonts\.gstatic\.com$
+(^|\.)fonts\.google\.com$
+(^|\.)fonts\.googleapis\.com$
+(^|\.)docs\.google\.com$
+(^|\.)sheets\.google\.com$
+(^|\.)slides\.google\.com$
+(^|\.)gmail\.com$
+(^|\.)mail\.google\.com$
+# Android/Google Play essentials
+(^|\.)play\.google\.com$
+(^|\.)play\.googleapis\.com$
+(^|\.)googleplay\.com$
+
+##########################################
+# MICROSOFT-CORE-SERVICES (REGEX WILDCARDS)
+##########################################
+(^|\.)microsoft\.com$
+(^|\.)data\.microsoft\.com$
+(^|\.)msftauth\.net$
+(^|\.)msftauthimages\.net$
+(^|\.)live\.com$
+(^|\.)live\.net$
+(^|\.)outlook\.com$
+(^|\.)office\.com$
+(^|\.)office365\.com$
+(^|\.)windowsupdate\.com$
+(^|\.)update\.microsoft\.com$
+(^|\.)login\.microsoftonline\.com$
+(^|\.)graph\.microsoft\.com$
+(^|\.)cdn\.office\.net$
+(^|\.)teams\.microsoft\.com$
+(^|\.)skype\.com$
+(^|\.)sfx\.ms$
+
+##########################################
+# SMART-TV-ESSENTIALS (REGEX WILDCARDS)
+##########################################
+
+# Samsung (safe essentials only)
+(^|\.)samsung\.com$
+(^|\.)samsungcloudcdn\.com$
+(^|\.)samsungknox\.com$
+(^|\.)samsungiotcloud\.com$
+
+# LG (safe essentials only)
+(^|\.)lg\.com$
+(^|\.)lge\.com$
+(^|\.)lgtvswcdn\.com$
+
+# Vizio (safe essentials only)
+(^|\.)vizio\.com$
+(^|\.)smartcast\.tv$
+
+# Roku (safe essentials only)
+(^|\.)roku\.com$
+(^|\.)cloudservices\.roku\.com$
+
+##########################################
+# IOT-CORE-SERVICES (REGEX WILDCARDS)
+##########################################
+
+# Philips Hue essentials
+(^|\.)philips-hue\.com$
+(^|\.)meethue\.com$
+(^|\.)discovery\.meethue\.com$
+
+# Wyze essentials
+(^|\.)wyze\.com$
+(^|\.)wyze-device-alexa\.amazonaws\.com$
+(^|\.)wyzecam\.com$
+(^|\.)api\.wyze\.com$
+
+# Amazon IoT essentials
+(^|\.)amazon\.com$
+(^|\.)amazonaws\.com$
+(^|\.)softwareupdates\.amazon\.com$
+
+##########################################
+# CLOUD-INFRASTRUCTURE (REGEX WILDCARDS)
+##########################################
+(^|\.)akamaihd\.net$
+(^|\.)akamai\.net$
+(^|\.)akamaitechnologies\.com$
+(^|\.)edgekey\.net$
+(^|\.)edgesuite\.net$
+(^|\.)cloudfront\.net$
+(^|\.)fastly\.net$
+(^|\.)cdn\.cloudflare\.net$
+
+##########################################
+# AUTH / CAPTIVE PORTAL / CONNECTIVITY
+##########################################
+(^|\.)clients3\.google\.com$
+(^|\.)connectivitycheck\.android\.com$
+(^|\.)connectivitycheck\.gstatic\.com$
+(^|\.)neverssl\.com$
+(^|\.)captive\.apple\.com$
+
+##########################################
+# PUSH NOTIFICATIONS (REGEX WILDCARDS)
+##########################################
+(^|\.)push\.apple\.com$
+(^|\.)push-apple\.com\.akadns\.net$
+(^|\.)pns\.apple\.com$
+(^|\.)fcm\.googleapis\.com$
+(^|\.)mtalk\.google\.com$
+
+##########################################
+# TIME SERVERS (REGEX WILDCARDS)
+##########################################
+(^|\.)time\.apple\.com$
+(^|\.)time\.google\.com$
+(^|\.)time\.windows\.com$
+(^|\.)pool\.ntp\.org$
+
+##########################################
+# NEWS & INFORMATION (REGEX WILDCARDS)
+##########################################
+(^|\.)bbc\.com$
+(^|\.)cnn\.com$
+(^|\.)npr\.org$
+(^|\.)reuters\.com$
+(^|\.)ap\.org$
+
+##########################################
+# BANKING & FINANCE ESSENTIALS (REGEX WILDCARDS)
+##########################################
+(^|\.)paypal\.com$
+(^|\.)stripe\.com$
+
+##########################################
+# SECURITY & UPDATES (REGEX WILDCARDS)
+##########################################
+(^|\.)mozilla\.org$
+(^|\.)mozilla\.net$
+(^|\.)firefox\.com$
+(^|\.)gravatar\.com$

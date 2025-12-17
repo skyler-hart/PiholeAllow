@@ -46,6 +46,8 @@
 @@||instagram.com^
 @@||twitter.com^
 @@||x.com^
+@@||oculus.com^
+@@||meta.com^
 
 # Shopping
 @@||amazon.com^

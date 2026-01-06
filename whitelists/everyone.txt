@@ -11,6 +11,7 @@
 @@||weather.com^
 @@||mapbox.com^
 @@||cloudflare.com^
+@@||privateinternetaccess.com^
 
 # Cloud Storage
 @@||dropbox.com^

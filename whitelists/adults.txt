@@ -37,6 +37,7 @@
 # Shopping (Adult-oriented)
 @@||wine.com^
 @@||wayfair.com^
+@@||tractorsupply.tt.omtrdc.net^
 
 # Entertainment
 @@||spotify.com^

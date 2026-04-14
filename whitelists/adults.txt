@@ -22,6 +22,7 @@
 @@||ally.com^
 @@||usaa.com^
 @@||robinhood.com^
+@@||cdn.pendo.io^
 
 # News & Media
 @@||reddit.com^

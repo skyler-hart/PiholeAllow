@@ -32,6 +32,7 @@
 @@||primevideo.com^
 @@||services.sonarr.tv^
 @@||youtubetv.com^
+@@||pbs.org^
 
 # Educational
 @@||khanacademy.org^

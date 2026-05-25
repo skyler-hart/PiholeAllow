@@ -4,7 +4,6 @@
 
 # Essential Services
 @@||google.com^
-@@||youtube.com^
 @@||wikipedia.org^
 @@||github.com^
 @@||pinterest.com^

@@ -2,6 +2,9 @@
 # Domains that should be blocked for ALL family members (kids and adults)
 # ABP-style format for better Pi-hole compatibility
 
+@@||youtube.com^
+
+
 # Explicit Adult Content (ABP-style)
 ||pornhub.com^
 ||xvideos.com^

@@ -3,6 +3,8 @@
 # These are in addition to the family-wide blocklist
 # ABP-style format for better Pi-hole compatibility
 
+@@||youtube.com^
+
 # Social Media (unmonitored access)
 ||tiktok.com^
 ||snapchat.com^

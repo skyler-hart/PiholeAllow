@@ -54,6 +54,7 @@
 @@||video.sacdnssedge.com^
 @@||motherless.com^
 @@||motherlessmedia.com^
+@@||youtube.com^
 
 # Health
 @@||webmd.com^
